@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess</title>
+
+</head>
+
+<body> 
+
+<script>
+var number= Math.floor(Math.random()* 100);
+function guess(){
+var name=document.getElementById('name').value;
+var guess=document.getElementById('guess').value;
+
+if (guess<number)
+{
+document.getElementById('try4').innerHTML = name+ ', your guess is too low!';
+}
+else if(guess>number)
+{
+document.getElementById('try4').innerHTML = name+ ', your guess is too high!';
+}
+else if (guess==number)
+{
+document.getElementById('try4').innerHTML = name+ ', your guess is correct!!! Enter new number to play again.';
+number= Math.floor(Math.random()* 100);
+}
+
+}
+</script>
+<h1> Guess my number</h1>
+<p> Valid numbers 1-100</p>
+<p>Enter your first name:</p>
+<input id="name" type="text" >
+<p>Enter your first name:</p>
+<input id="guess" type="number" onchange="guess()" min="1" max="100">
+<h2 id="try4"></h2>
+<h2 id="try5"></h2>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chairiavelle Pizza</title>
+<script language="JavaScript">
+
+//Comment trail script- By Kurt (kurt.grigg@virgin.net)
+//Script featured on Dynamic Drive
+//Visit http://www.dynamicdrive.com for this script and more
+
+colours=new Array('#ff0000','#00ff00','#ffffff','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff')
+n = 10;
+y = 0;
+x = 0;
+n6=(document.getElementById&&!document.all);
+ns=(document.layers);
+ie=(document.all);
+d=(ns||ie)?'document.':'document.getElementById("';
+a=(ns||n6)?'':'all.';
+n6r=(n6)?'")':'';
+s=(ns)?'':'.style';
+if (ns){
+for (i = 0; i < n; i++)
+document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#ff0000></layer>');
+}
+if (ie)
+document.write('<div id="con" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+if (ie||n6){
+for (i = 0; i < n; i++)
+document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+i/2+'"></div>');
+}
+if (ie)
+document.write('</div></div>');
+(ns||n6)?window.captureEvents(Event.MOUSEMOVE):0;
+function Mouse(evnt){
+y = (ns||n6)?evnt.pageY+4 - window.pageYOffset:event.y+4;
+x = (ns||n6)?evnt.pageX+1:event.x+1;
+}
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+function animate(){
+o=(ns||n6)?window.pageYOffset:0;
+if (ie)con.style.top=document.body.scrollTop;
+for (i = 0; i < n; i++){
+var temp1 = eval(d+a+"dots"+i+n6r+s);
+
+randcolours = colours[Math.floor(Math.random()*colours.length)];
+(ns)?temp1.bgColor = randcolours:temp1.background = randcolours; 
+if (i < n-1){
+ var temp2 = eval(d+a+"dots"+(i+1)+n6r+s);
+ temp1.top = parseInt(temp2.top);
+ temp1.left = parseInt(temp2.left);
+ } 
+else{
+ temp1.top = y+o;
+ temp1.left = x;
+ }
+}
+setTimeout("animate()",10);
+}
+animate();
+// -->
+</script>
+<h1 style="font-family:verdana;" align ="center">Chiarravelle Pizza</h1>
+
+<p>Chiaravalle Pizza has been in business for the past 50 years. We specialize in unique
+pizzas and other Italian dishes. Located on Main Street in Ann Arbor, Chiaravalle
+Pizza is proud to be on the city’s “Ten Best Restaurants” list for the past seven years.
+At Chiaravalle Pizza we offer the finest food at reasonable prices! Out chef brings his
+authentic family recipe directly from Italy. Call 1-734-663-5555 for reservations or
+orders today!
+</P>
+
+
+<P>Our service include:
+<ul>A 100 seating capacity restaurant
+<ul>Take out orders
+<ul>Delivery services at no charge
+
+<p>Our pizza are made from homemade dough and sauces. Our pizzas are topped with the
+freshest meats and veggies.
+</P>
+
+<p>Our pizzas include:
+<ul>Create-your-own-pizza</ul>
+<ul>Stuffed pizzas,</ul>
+<ul>Speciality pizzas</ul>
+<ul>Stromboli,</ul>
+<ul>Calzones,</ul>
+<ul>Paninis</ul>
+<ul>Standwiches</ul>
+<ul>Buffalo wings</ul>
+<ul>Specialty pastas</ul>
+
+<p>WE USE ONLY THE BEST TOPPINGS (MAY VARY BY SEASON)
+
+<P>Mild cheddar cheese, Hormel pepperoni, Italian sausage, ground beef, sliced ham, sliced
+Genoa salami, red onions, yellow onions, sliced green or red peppers, fresh basil leaves,
+fresh spinach leaves, mushrooms, jalapeños, Roma tomatoes, dole pineapple chunks,
+black olives, Kalamata Greek olives, bacon bits, marinated chicken breast, minced garlic,
+roasted garlic, sliced Greek pepper onions, marinated artichoke hearts and sun dried
+tomatoes. Anchovies available (add $1.50)</p>
+
+
+<P>We are open for lunch or dinner and you can dine in or order online for pick up or
+delivery.
+
+
+<P>We have specials on different days like:
+Tuesday nights are spaghetti nights
+On Thursdays we offer a salad and pizza buffet
+</P>
+
+
+<P>Chiaravalle pizza can deliver fresh, homemade pizza right to your door. Try one of our
+famous specialty pizzas, with topping combinations and flavors you won’t find at the big
+impersonal chains. Come join us today!
+</P>
+
+
+<P>Our family sauce recipe is made from scratch daily. Combine our homemade sauce, the
+freshest ingredients and a delicious hand-tossed crust and you’ve got the tastiest pizza
+in town. We are proud to be in your local, family-owned, neighborhood pizza delivery
+restaurant and we can’t wait to serve you. Call today and let us bring you a fresh, hot
+pizza right away!
+</P>
